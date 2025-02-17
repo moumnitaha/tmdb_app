@@ -8,6 +8,7 @@ import ImageLoader from "../components/ImageLoader";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import MovieCard from "../components/MovieCard";
 import { MovieResult, Movie } from "../types/types";
+import Orb from "@/Orb/Orb";
 
 const Search = async (value: string): Promise<MovieResult> => {
   const response = await axios.get(
@@ -39,6 +40,14 @@ function MovieLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <div>
+      <div className="w-full h-full fixed top-0 left-0">
+        <Orb
+          hoverIntensity={0.5}
+          rotateOnHover={true}
+          hue={0}
+          forceHoverState={false}
+        />
+      </div>
       <header className="bg-transparent backdrop-blur-md p-2 text-white text-start w-full fixed top-0 flex flex-row items-center z-20 shadow-lg">
         <h1
           className="text-2xl font-bold cursor-pointer"
