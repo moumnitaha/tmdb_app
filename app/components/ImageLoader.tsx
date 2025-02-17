@@ -1,12 +1,14 @@
 import React from "react";
 
-function ImageLoader() {
+function ImageLoader({ width }: { width: number }) {
   return (
     <div
       role="status"
       className="space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center flex-col"
     >
-      <div className="flex items-center justify-center w-48 aspect-[9/13] bg-gray-300 rounded-sm sm:w-48 dark:bg-gray-700 m-2">
+      <div
+        className={`flex items-center justify-center w-${width} aspect-[9/13] bg-gray-300 rounded-sm sm:w-${width} dark:bg-gray-700 m-2`}
+      >
         <svg
           className="w-10 h-10 text-gray-200 dark:text-gray-600"
           aria-hidden="true"

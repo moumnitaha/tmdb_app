@@ -1,13 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
 import SplitText from "@/SplitText/SplitText";
-import GridMotion from "@/GridMotion/GridMotion";
 
 export default function Home() {
   const router = useRouter();
-  const handleAnimationComplete = () => {
-    console.log("All letters have animated!");
-  };
   return (
     <main className="w-full h-screen flex items-center justify-center">
       <SplitText

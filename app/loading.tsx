@@ -3,8 +3,8 @@ import { HashLoader } from "react-spinners";
 
 function Loading() {
   return (
-    <main className="flex justify-center items-center bg-green-950 h-screen w-full">
-      <HashLoader />
+    <main className="flex justify-center items-center text-4xl font-bold h-screen w-full text-white">
+      Loding your movies...
     </main>
   );
 }
